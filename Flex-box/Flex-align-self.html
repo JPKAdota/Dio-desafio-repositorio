@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos - Align Self</title>
-
+    
     <style>
         .flex-container{
-            display: flex;
             max-width: 350px;
-            border: 2px solid black;
+            border: 2px  solid black;
             margin-bottom: 10px;
-           /* align-items: center;*/
+            display: flex;
         }
 
         .align-container{
-            align-items: center;
+            align-items: flex-end;
         }
 
         .item{
@@ -50,22 +49,58 @@
         .auto{
             align-self: auto;
         }
+
+        .direction{
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
+    <h1>row</h1>
+
     <section class="flex-container align-container">
         <div class="item auto">AAA</div>
         <div class="item auto">123</div>
-        <div class="item auto">ijknmbhjgyuhhh</div>
+        <div class="item auto">dksdlam, dnhuashu hsuahsa </div>
         <div class="item auto">ITEM 4</div>
     </section>
 
     <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">dksdlam shauhsuahu hsua hum,dmak</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Lorem ipsum dolor sit </div>
+    </section>
+
+    <h1>column</h1>
+    <section class="flex-container align-container direction">
         <div class="item auto">AAA</div>
         <div class="item auto">123</div>
-        <div class="item auto">ijknmbhjgyuhhh</div>
+        <div class="item auto">dksdlam, dnhuashu hsuahsa </div>
         <div class="item auto">ITEM 4</div>
     </section>
-    
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">dksdlam shauhsuahu hsua hum,dmak</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Lorem ipsum dolor sit </div>
+    </section>
+
+
 </body>
 </html>
